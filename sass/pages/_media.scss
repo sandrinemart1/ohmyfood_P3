@@ -1,0 +1,56 @@
+.media{
+    width:100%;
+    margin: 0 auto;
+    @media screen and (min-width:970px){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 150px;
+        grid-template-areas: 
+        " media1 media2"
+        " btn btn";
+        justify-items: center;
+        align-items: flex-start;
+        .section-presentation{
+            grid-area: media1;
+            width: 50vw;
+        }
+        .btn{
+        grid-row:2;
+        grid-column: 1 /span 2;
+        background-color: inherit;
+        }
+        nav{
+            grid-area: media2;
+            width: 50vw;
+        }
+    }
+}
+
+   
+.btn{
+        background-color: $color-bg;
+        padding: 50px;
+        text-align: center;
+        button{
+            color: white;
+            padding:15px 20px;
+            background:$button-bg;
+            @include box-shadow ;
+            border-radius: 45px;
+            border:0px;
+            font-size: 17px;
+            transform:scale(1);
+            &:active{
+                background:linear-gradient($color-secondary-light,$color-primary-light);
+            border-top-color: $color-secondary-light;
+                border-bottom-color:lighten($color-primary-light,25%) ;
+                box-shadow: 0 4px 9px 2px #b7b7b7;
+            }
+            @media screen and (min-width: 970px){
+                transform:scale(1.5);
+            }
+        } 
+
+    }
+
+

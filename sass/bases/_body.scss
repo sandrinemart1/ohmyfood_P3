@@ -1,0 +1,28 @@
+$color-bg:#f6f6f6;
+
+body{
+width:100%;
+margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+    font-size:1.1rem;
+    font-weight: 700;
+    list-style-type: none;
+    box-sizing: border-box;
+    background-color:$color-bg;
+    @media screen and (min-width: 970px){
+        font-size: 1.3rem;
+    }
+    
+}
+
+a{
+    color:black;
+    text-decoration: none;
+    cursor:pointer;
+    display: block;
+    &:visited{
+        color:black;
+        text-decoration: none;
+    }
+}

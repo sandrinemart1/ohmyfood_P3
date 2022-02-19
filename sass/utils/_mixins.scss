@@ -1,0 +1,85 @@
+$color-primary:#9356DC;
+$color-primary-light:lighten($color-primary,5%);
+$color-primary-lighter:lighten($color-primary,40%);
+$color-secondary:#FF79DA;
+$color-secondary-light:lighten($color-secondary,5%);
+$color-tertiary:#99E2D0;
+$color-bg:#f6f6f6;
+$light-color-bg:lighten($color-bg,20%);
+$dark-color-bg:darken($color-bg, 10%);
+$button-bg:linear-gradient($color-secondary,$color-primary);
+
+
+@mixin header{
+    .page-title{
+        width: 100%;
+        height:60px;
+        display: inline-flex;
+        align-items: center;
+        
+        i{
+            margin:0 70px 0 20px;
+    }
+    
+    .page-restaurant__img-container{
+        width:375px;
+        height: 260px;
+        position: relative;
+
+        img{
+            
+            width:auto;
+            max-height:260px;
+        }
+    }    
+} 
+}
+
+
+
+
+@mixin box-shadow {
+    box-shadow: 0 4px 9px 2px #{$dark-color-bg};
+} 
+
+@mixin btn {
+    color: white;
+    width:230px;
+    padding:15px 20px;
+    background:$button-bg;
+    @include box-shadow ;
+    border-radius: 45px;
+    border:0px;
+    font-size: 17px;
+    transform:scale(1);
+    &:hover{
+        background:linear-gradient($color-secondary-light,$color-primary-light);
+    border-top-color: $color-secondary-light;
+        border-bottom-color:lighten($color-primary-light,25%) ;
+        box-shadow: 0 4px 9px 2px #b7b7b7;
+    }
+    @media screen and (min-width: 970px){
+        transform:scale(1.5);
+    }
+    
+} 
+@mixin love{
+    i{
+        font-size: 1.5rem;
+        font-weight:normal;
+        padding: 20px;
+        border-radius: 50%;
+
+        &::before {
+            content: "\f004";
+            transition: color 2s ease-out;
+            }
+        &:hover::before{
+            cursor: pointer;
+            color: $color-secondary;
+            font-weight: bold;
+            }
+    }
+
+}
+   

@@ -1,0 +1,10 @@
+@import "../utils/mixins";
+.btn{
+        background-color: $color-bg;
+        padding: 50px;
+        text-align: center;
+        button{
+            @include btn;
+        } 
+
+    }

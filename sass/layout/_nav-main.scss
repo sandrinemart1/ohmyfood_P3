@@ -1,0 +1,47 @@
+nav{ 
+    .nav__choice{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-weight: 600;
+        background-color:$color-bg;
+        padding:25px 30px;
+        margin:25px 10%;
+        box-shadow: 0 7px 7px 0px #ebebebf7;
+        border-radius: 25px;
+        font-size: 1.02rem;
+        position: relative;
+        &:hover{
+            background-color:lighten($color-primary, 35%)
+        }
+        &:hover i{
+            color: $color-primary;
+        }
+        @media screen and (min-width:768px){
+            font-size: 1.1rem;
+        }
+        @media screen and (min-width:970px){
+                font-size: 1.3rem;
+        }   
+        p:nth-child(1){
+            padding:4px 10px;
+            background-color: $color-primary;
+            border-radius: 50%;
+            color: white;
+            position: absolute;
+            left: -10px;
+            font-size: 0.85rem;
+            font-weight:400;
+        }
+        i{
+            font-size: 1.1rem;
+            opacity: 0.5;
+            padding-right: 15px;
+            @media screen and (min-width:970px){
+                font-size: 1.3rem;
+            } 
+        }
+
+    }
+}
+

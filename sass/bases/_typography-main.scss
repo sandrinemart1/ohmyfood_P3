@@ -1,0 +1,23 @@
+h1,h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    padding:40px 0 20px;
+    @media screen and (min-width: 768px){
+        text-align: center;
+        font-size: 1.7rem;
+    }
+}
+h2{
+    padding-left: 1.5rem;
+}
+h3{
+    font-size: 1.2rem;
+    @media screen and (min-width: 768px){
+        text-align: center;
+        font-size: 1.7rem;
+    }
+}
+p{
+    margin: 0;
+}

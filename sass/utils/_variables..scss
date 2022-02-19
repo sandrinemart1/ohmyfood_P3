@@ -1,0 +1,10 @@
+$color-primary:#9356DC;
+$color-primary-light:lighten($color-primary,5%);
+$color-primary-lighter:lighten($color-primary,40%);
+$color-secondary:#FF79DA;
+$color-secondary-light:lighten($color-secondary,5%);
+$color-tertiary:#99E2D0;
+$color-bg:#f6f6f6;
+$light-color-bg:lighten($color-bg,20%);
+$dark-color-bg:darken($color-bg, 10%);
+$button-bg:linear-gradient($color-secondary,$color-primary);

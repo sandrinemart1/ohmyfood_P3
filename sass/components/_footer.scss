@@ -1,0 +1,44 @@
+footer {
+    color:white;
+    background-color: #3c3b3b;
+    padding:30px;
+    font-size: 17px;
+    line-height: 25px;
+    
+    h3{
+        font-family:'Shrikhand', cursive;
+        font-weight: 400;
+        padding-bottom: 20px;
+        @media screen and (min-width:768px){
+            text-align: center;
+
+        }
+    }
+    ul{
+        list-style-type: none;
+        padding: 0;
+        @media screen and (min-width: 768px){
+            display: flex;
+            justify-content: space-around;
+            font-size: 1.3rem;
+        }
+
+        li {
+            a{
+                display: inline;
+                color: white;
+                &:hover,
+                &:active,
+                &:visited
+                {
+                    color: white;
+                }
+            }
+            i{
+            color:white;
+            padding-right: 7px;
+            }
+        }
+
+    }
+}

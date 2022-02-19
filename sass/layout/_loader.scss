@@ -1,0 +1,136 @@
+.loader-wrap{
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    position: fixed;
+    text-align: center;
+    line-height: 65vh;/*centrer le texte*/
+    background-color: $color-bg;
+    animation:color 700ms 500ms   ease backwards;
+    animation: loader-stop 2500ms 500ms cubic-bezier(.6,.01,.62,.99) forwards;
+    animation-iteration-count: 1;
+    
+    &__loader{
+        width:120px;
+        height:120px;
+        border-radius: 50%;
+        border:9px solid transparent;
+        border-top-color:$color-primary;
+        border-bottom-color:$color-primary;
+        animation: spin 2s linear  infinite;
+        margin:98px auto;
+        &::after{
+            content:"" ;
+           position: absolute;
+           top: -40px;
+           left:-40px;
+           bottom:-40px;
+           right: -40px;
+           border:3px solid transparent;
+           border-top-color:lighten( $color-primary, 10%);border-bottom-color:lighten( $color-primary, 10%);
+           border-radius: 50%;
+           animation:spin 8s linear infinite;
+        }
+        &::before{
+            content:"" ;
+            position: absolute;
+            top: 20px; 
+            left:20px;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 040px;
+            border:6px solid transparent;
+            border-top-color:lighten($color-primary, 20%) ; border-bottom-color:lighten($color-primary, 20%) ;
+            animation: spin 1s linear infinite;
+        }   
+ 
+     }
+        &__text{
+            font-family:'Shrikhand', cursive;
+            font-weight: 200;
+            font-size: 30px;
+            opacity: 0;
+            animation:color 2500ms 100ms ease both;
+            }
+    
+        }
+        .loader-wrap__img{
+            width: 100%;
+            position: absolute;
+            top:450px;
+            animation:scale 2000ms 500ms backwards;
+    
+            img{
+                width: 55%;
+                color:black;
+
+            }
+            .filter{
+                filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(226deg) brightness(100%) contrast(119%) ;
+            }
+        }   
+@keyframes loader-stop {
+    0%,80%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes scale{
+    0%{
+        transform:scale(0),translateY(-50px);
+        opacity:0;
+    }
+    -20%{
+        transform:scale(0.18);
+    }
+    35%{
+        transform:scale(0.34);
+        opacity:0.5;
+    }
+    75%{
+        transform:scale(0.75);
+        opacity:0.7;
+
+    }
+    80%{
+        transform:scale(1);
+        opacity: 1;
+        filter: drop-shadow(5px 10px 5px $dark-color-bg);
+    }
+}
+@keyframes color{
+    10%{
+        color:$color-primary;
+        opacity:1;
+
+    }
+    30%{
+        color: $color-primary-light;
+        opacity: 1;
+    }
+    50%{
+        color:$button-bg;
+        opacity: 1;
+    }
+    65%{
+        color:$color-secondary-light;
+        opacity: 0.9;
+    }
+    80%{
+        color:$color-secondary;
+        opacity: 0.1;
+    }
+    100%{
+        opacity: 0;
+    }    
+}

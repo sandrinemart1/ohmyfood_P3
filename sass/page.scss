@@ -1,0 +1,16 @@
+//bases
+@import "bases/_bases";
+@import "bases/body";
+@import "bases/typography-page";
+//components
+@import "components/button";
+@import "components/footer";
+//layout
+
+//pages
+@import "pages/header-page";
+@import "pages/section-pages-menu";
+@import "pages/menuchoice-avec-animation-page";
+//utils
+@import "utils/variables.";
+@import "utils/mixins";
