@@ -41,9 +41,10 @@
         }
     }
     &--price{
-        transform: translate(51px);
-        transition:1500ms ease-in-out;
+        transform: translateX(0);
+        transition:800ms ease-in-out 250ms;
         margin-bottom: 1px;
+        margin-right: 5px;
         display: flex;
         padding: 0 10px;
         background-color: white;
@@ -54,13 +55,13 @@
             width: 65px;
             height:76px;
             margin-bottom: -10px;
-            margin-right: -15px;
+            margin-right: -85px;
+            transform: translateX(0);
+            transition: 1200ms ease-in-out;
             margin-left:3px ;
             display:flex;
             align-items:center;
             justify-content:center;
-            transform: translateX(85px);
-            // transition:1000ms ease-in-out;
             .wrap-icon{
                 height: 20px;
                 width: 20px;
@@ -71,28 +72,27 @@
                 align-items:center;
                 justify-content:center;
                 transform: rotate(360deg);
-                transition:transform 850ms ease; 
+                transition:transform 1250ms ease; 
                 transition-delay: 100ms; 
             }
         }
     }
+            
+
+            
 
 
 .menu__choice:hover .menu__choice--check{
-    animation: iconappear 1000ms  ease both ;
-    animation-iteration-count: 1;
+     transform: translateX(-74px);
+
 }
-.menu__choice .menu__choice--check{
-    animation: iconappear-reverse 900ms  ease-out both ;
-    animation-iteration-count: 1;
+.menu__choice:not(:hover) .menu__choice--check{   
+    transform: translateX(0);
 }
 
 .menu__choice:hover .menu__choice--price{
-    animation: pricemove 600ms  ease  both ;
-    // animation-delay: 100ms;
-}
-.menu__choice .menu__choice--price{
-    animation: pricemove-reverse 750ms  ease-in-out 300ms both ;
+    transform: translateX(-75px);
+    
 }
 
 
@@ -101,76 +101,31 @@
 }
 
 .menu__choice:hover .menu__choice--header {
-    animation: ellipsis 400ms cubic-bezier(.37,.02,.64,1.01)  forwards ;
-    animation-delay: 100ms;
-    // animation-iteration-count: 1;
+    animation: ellipsis 600ms cubic-bezier(.37,.02,.64,1.01)   forwards ;
+    animation-delay: 300ms;
+    animation-iteration-count: 1;
 }
 .menu__choice .menu__choice--header{
-    animation: ellipsis-reverse 850ms ease-in  forwards;
+    animation: ellipsis-reverse 750ms ease-in  forwards;
 
 }
 @keyframes ellipsis{
     0%{
-        margin-right:-55px;
+        margin-right:-5px;
     }
     100%{
-        margin-right:0px;
+        margin-right:65px;
     }
 }
 @keyframes ellipsis-reverse{
     0%,65%{
-        margin-right:0px;
+        margin-right:65px;
     }
     100%{
-        margin-right:-55px;
+        margin-right:-5px;
     }
 }
 
-@keyframes iconappear {
-    0%{
-        transform: translateX(85px);
-    }
-    30%, 75%{
-        transform: translateX(0);
-    }
-    100%{
-        transform: translateX(-5px);
-    }
-}
-@keyframes iconappear-reverse {
-    0%{
-        transform: translateX(-5px);
-    }
-    30%, 70%{
-        transform: translateX(0);
-    }
-    100%{
-        transform: translateX(85px);
-    }
-}
-@keyframes pricemove {
-    0%,10%{
-        transform: translateX(0px);
-        margin-right: -50px;
-    }
-    40%{
-        margin-right: -25px;
-    }
-    60%{
-        margin-right: -15px;
-    }
-    100%{
-        transform: translateX(-2px);
-        margin-right: none;
-    }
-}
-@keyframes pricemove-reverse {
-    0%{
-        transform: translateX(-2px);
-        margin-right: none;
-    }
-    100%{
-        transform: translateX(0px);
-        margin-right: -55px;
-    }
-}  
+
+
+ 
